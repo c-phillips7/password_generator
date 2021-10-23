@@ -136,8 +136,8 @@ function getUserOptions() {
   }
 
   // check if integer
-  else if (Number.isInteger(length)){
-    alert("Only use integers, please only use whole numbers.");
+  else if (!(Number.isInteger(parseFloat(length)))){
+    alert("Only use integers.");
     console.error("Input is not Integer");
     reset();
     return;
@@ -153,7 +153,6 @@ function getUserOptions() {
   else {
     userChoices.length = length;
   }
-
 
 // ask for LowerCase
   var userLowerCase = confirm('Would you like LowerCase letters')
