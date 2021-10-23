@@ -98,6 +98,14 @@ var userChoices = {
   numeric: false,
 };
 
+// function to reset userChoices to default so that when an invalid input is entered, doesn't generate a new password.
+function reset () {
+  userChoices.length = 0;
+  userChoices.upperCase = false;
+  userChoices.lowerCase = false;
+  userChoices.special = false;
+  userChoices.numeric = false;
+}
 
 function getUserOptions() {
 /* Cheking for:
@@ -119,26 +127,27 @@ function getUserOptions() {
 // ask for length
   var length = prompt('How long would you like your password to be?')
 
-  console.log(parseInt(length));
-
   // check if non numbers used
   if (isNaN(length)) {
     alert("Input is not a number");
-    console.error("Input is NaN")
+    console.error("Input is NaN");
+    reset();
     return;
   }
 
   // check if integer
   else if (Number.isInteger(length)){
     alert("Only use integers, please only use whole numbers.");
-    console.error("Input is not Integer")
+    console.error("Input is not Integer");
+    reset();
     return;
   }
 
   // check if number is too large
   else if (!(length >= 8  && length <= 128)) {
     alert("Pick a number between 8-128 characters");
-    console.error("Value out of range")
+    console.error("Value out of range");
+    reset();
     return;
   }
   else {
@@ -194,6 +203,7 @@ var userSpecialCharacters = confirm('Would you like special characters?')
   if(!userLowerCase && !userUpperCase && !userNumericCharacters && !userSpecialCharacters ){
     alert("Please select at least one character type")
     console.error("Character types were not selected")
+
   }
 
   console.log(userChoices);
