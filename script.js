@@ -125,11 +125,11 @@ function getUserOptions() {
 
 
 // ask for length
-  var length = prompt('How long would you like your password to be?')
+  var length = prompt('How long would you like your password to be? (Use a number between 8 - 128)')
 
   // check if non numbers used
   if (isNaN(length)) {
-    alert("Input is not a number");
+    alert("Input is not a number.");
     console.error("Input is NaN");
     reset();
     return;
@@ -137,7 +137,7 @@ function getUserOptions() {
 
   // check if integer
   else if (!(Number.isInteger(parseFloat(length)))){
-    alert("Only use integers.");
+    alert("Please only use integers.");
     console.error("Input is not Integer");
     reset();
     return;
@@ -145,7 +145,7 @@ function getUserOptions() {
 
   // check if number is too large
   else if (!(length >= 8  && length <= 128)) {
-    alert("Pick a number between 8-128 characters");
+    alert("Please only pick a number between 8-128 characters.");
     console.error("Value out of range");
     reset();
     return;
@@ -155,7 +155,7 @@ function getUserOptions() {
   }
 
 // ask for LowerCase
-  var userLowerCase = confirm('Would you like LowerCase letters')
+  var userLowerCase = confirm('Would you like to use LowerCase letters')
 
 // sign to userOptions
   if (userLowerCase){
@@ -166,7 +166,7 @@ function getUserOptions() {
 
 
   // ask for UpperCase
-  var userUpperCase = confirm('Would you like UpperCase letters?')
+  var userUpperCase = confirm('Would you like to use UpperCase letters?')
 
 // sign to userOptions
   if (userUpperCase){
@@ -177,7 +177,7 @@ function getUserOptions() {
 
 
  // ask for numeric Characters
- var userNumericCharacters = confirm('Would you like numbers?')
+ var userNumericCharacters = confirm('Would you like to use numbers?')
 
  // sign to userOptions
    if (userNumericCharacters){
@@ -188,7 +188,7 @@ function getUserOptions() {
    
 
 // ask for Special Characters
-var userSpecialCharacters = confirm('Would you like special characters?')
+var userSpecialCharacters = confirm('Would you like to use special characters?')
 
 // sign to userOptions
   if (userSpecialCharacters){
@@ -200,8 +200,8 @@ var userSpecialCharacters = confirm('Would you like special characters?')
 
 // if all no, give error
   if(!userLowerCase && !userUpperCase && !userNumericCharacters && !userSpecialCharacters ){
-    alert("Please select at least one character type")
-    console.error("Character types were not selected")
+    alert("Please select at least one character type.")
+    console.error("No character types were not selected")
 
   }
 
@@ -270,6 +270,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
 
 
 

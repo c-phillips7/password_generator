@@ -1,3 +1,44 @@
+According to the assignment below, a password generator was created using JavaScript.
+
+Prompts were created to set user preferences for:
+
+• Password length (between 8 - 128)
+• Character type used
+    -lower case
+    -UPPER CASE
+    -numb3rs
+    -special characters!?
+
+
+Error 'alert' messages were set up for common wrong inputs for settings:
+
+• Input is not a number
+• Input is not an integer
+• Number is not between 8 - 128
+
+
+User's choices were then used to determine how random password is generated.
+
+
+
+Once generated, the password is checked to see if all the selected parameters were used at least once, if not a new password is generated.
+(Special thanks to Andrew Yu for reccomending .some() to achieve this.)
+
+
+Screenshots:
+
+
+
+
+Live page link:
+https://c-phillips7.github.io/password_generator/
+
+GitHub repo link:
+https://github.com/c-phillips7/password_generator/tree/master
+
+
+
+The assignment:
 # 03 JavaScript: Password Generator
 
 Create an application that generates a random password based on user-selected criteria. The app runs in the browser and features dynamically updated HTML and CSS powered by your JavaScript code. It has a clean and polished user interface and is responsive, which ensures that it adapts to multiple screen sizes.
