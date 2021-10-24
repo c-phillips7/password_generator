@@ -25,7 +25,7 @@ Once generated, the password is checked to see if all the selected parameters we
 
 
 Screenshots:
-![Screenshot](https://github.com/c-phillips7/password_generator/blob/master/assets/password_generator_screenshot.png?raw=true)
+![Screenshot](https://github.com/c-phillips7/password_generator/blob/master/Assets/password_generator_screenshot.png?raw=true)
 
 
 
