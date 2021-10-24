@@ -20,13 +20,12 @@ Error 'alert' messages were set up for common wrong inputs for settings:
 User's choices were then used to determine how random password is generated.
 
 
-
 Once generated, the password is checked to see if all the selected parameters were used at least once, if not a new password is generated.
 (Special thanks to Andrew Yu for reccomending .some() to achieve this.)
 
 
 Screenshots:
-
+![Screenshot](https://github.com/c-phillips7/password_generator/blob/master/assets/password_generator_screenshot.png?raw=true)
 
 
 
